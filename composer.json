@@ -1,0 +1,15 @@
+{
+    "name": "michail/php-project-45",
+    "description": "Brief description of the project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "mikhaelHan",
+            "email": "hancharuk270185@mail.ru"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
+}
