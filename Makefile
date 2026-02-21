@@ -9,3 +9,9 @@ brain-games:
 # Запуск валидации
 validate:
 	composer validate
+
+# Запуск линтера
+lint:
+	composer lint
+lint-fix:
+	composer lint-fix
