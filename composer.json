@@ -13,15 +13,19 @@
         }
     ],
     "autoload": {
+        "files": [
+            "src/Even.php"
+        ],
         "psr-4": {
-            "BrainGames\\Cli\\": "src"
+            "BrainGames\\": "src"
         }
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.12.7"
     },
     "bin": [
-        "bin/brain-games"
+        "bin/brain-games",
+        "bin/brain-even"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^4.0"

@@ -6,6 +6,10 @@ install:
 brain-games:
 	./bin/brain-games
 
+# Запуск brain-even
+brain-even:
+	./bin/brain-even
+
 # Запуск валидации
 validate:
 	composer validate
