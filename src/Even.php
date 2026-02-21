@@ -5,7 +5,7 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-function startGame()
+function startEvenGame()
 {
     $numbers = [15 => 'no', 6 => 'yes', 7 => 'no'];
     $isWinner = true;

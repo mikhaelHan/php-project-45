@@ -2,13 +2,13 @@
 install:
 	composer install
 
-# Запуск brain-games
+# Запуск games
 brain-games:
 	./bin/brain-games
-
-# Запуск brain-even
 brain-even:
 	./bin/brain-even
+brain-calc:
+	./bin/brain-calc
 
 # Запуск валидации
 validate:

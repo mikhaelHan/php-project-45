@@ -14,7 +14,9 @@
     ],
     "autoload": {
         "files": [
-            "src/Even.php"
+            "src/Cli.php",
+            "src/Even.php",
+            "src/Calc.php"
         ],
         "psr-4": {
             "BrainGames\\": "src"
@@ -25,7 +27,8 @@
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^4.0"
