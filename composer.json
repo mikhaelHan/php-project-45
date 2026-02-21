@@ -8,7 +8,14 @@
             "email": "hancharuk270185@mail.ru"
         }
     ],
-    "require": {},
+    "autoload": {
+        "psr-4": {
+            "BrainGames\\Cli\\": "src"
+        }
+    },
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.7"
+    },
     "bin": [
         "bin/brain-games"
     ]
