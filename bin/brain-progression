@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Cli\game;
+
+function questionCreator()
+{
+  $start = rand(1, 9);
+  $step = rand(1, 9);
+  $hiddenIndex = rand(1, 8);
+
+  $progression = [];
+  $current = $start;
+
+  for ($i = 0; $i < 10; $i++) {
+    $progression[] = $current;
+    $current += $step;
+  }
+
+  $correctAnswer = $progression[$hiddenIndex];
+  $progression[$hiddenIndex] = '..';
+
+  return [implode(' ', $progression) => $correctAnswer];
+}
+
+
+$ruleText = 'What number is missing in the progression?';
+$questions = array_merge(questionCreator(), questionCreator(), questionCreator());
+$check = fn($answer, $correct) => $answer == $correct;
+
+game($ruleText, $questions, $check);
