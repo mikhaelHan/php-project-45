@@ -23,7 +23,7 @@ function questionsCreator()
 
     $gcd = getGcd($num1, $num2);
 
-    $questions["{$num1}  {$num2}"] = $gcd;
+    $questions["{$num1} {$num2}"] = $gcd;
   }
 
   return $questions;
