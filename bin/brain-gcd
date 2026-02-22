@@ -5,8 +5,9 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\game;
 
-$ruleText = 'What is the result of the expression?';
-$questions = ['4 + 10' => 14, '25 - 11' => 14, '25 * 7' => 175];
+
+$ruleText = 'Find the greatest common divisor of given numbers.';
+$questions = ['25  50' => 25, '100  52' => 4, '3  9' => 3];
 $check = fn($answer, $correct) => $answer == $correct;
 
 game($ruleText, $questions, $check);

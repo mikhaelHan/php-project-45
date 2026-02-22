@@ -3,6 +3,11 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Even\startEvenGame as start;
+use function BrainGames\Cli\game;
 
-start();
+
+$ruleText = 'Answer "yes" if the number is even, otherwise answer "no".';
+$questions = [15 => 'no', 6 => 'yes', 7 => 'no'];
+$check = fn($answer, $correct) => $answer === $correct;
+
+game($ruleText, $questions, $check);
