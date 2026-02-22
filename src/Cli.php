@@ -23,8 +23,8 @@ function game(string $ruleText, array $questions, callable $check)
     line($ruleText);
 
     foreach ($questions as $question => $correctValue) {
-        $answer = prompt("Question: {$question}");
-        line("Your answer: %s", $answer);
+        line("Question: %s", $question);
+        $answer = prompt('Your answer');
 
         if ($check($answer, $correctValue)) {
             line('Correct!');
