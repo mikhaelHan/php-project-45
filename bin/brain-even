@@ -5,9 +5,26 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\game;
 
+function questionsCreator()
+{
+  $questions = [];
+
+  for ($i = 0; $i < 3; $i++) {
+    $num = rand(2, 31);
+
+    while (in_array($num, $questions)) {
+      $num = rand(2, 31);
+    }
+
+    $questions[$num] = $num % 2 === 0 ? 'yes' : 'no';
+  }
+
+  return  $questions;
+}
+
 
 $ruleText = 'Answer "yes" if the number is even, otherwise answer "no".';
-$questions = [15 => 'no', 6 => 'yes', 7 => 'no'];
+$questions = questionsCreator();
 $check = fn($answer, $correct) => $answer === $correct;
 
 game($ruleText, $questions, $check);

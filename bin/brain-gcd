@@ -6,8 +6,31 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use function BrainGames\Cli\game;
 
 
+function getGcd(int $a, int $b): int
+{
+  return ($a % $b) ? getGcd($b, $a % $b) : $b;
+}
+
+function questionsCreator()
+{
+  $questions = [];
+
+  while (count($questions) < 3) {
+
+    $multiple = rand(2, 10);
+    $num1 = rand(1, 20) * $multiple;
+    $num2 = rand(1, 20) * $multiple;
+
+    $gcd = getGcd($num1, $num2);
+
+    $questions["{$num1}  {$num2}"] = $gcd;
+  }
+
+  return $questions;
+}
+
 $ruleText = 'Find the greatest common divisor of given numbers.';
-$questions = ['25  50' => 25, '100  52' => 4, '3  9' => 3];
+$questions = questionsCreator();
 $check = fn($answer, $correct) => $answer == $correct;
 
 game($ruleText, $questions, $check);
