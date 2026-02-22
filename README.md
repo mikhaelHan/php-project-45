@@ -12,3 +12,6 @@
 
 ### Brain Progression Demo
 [![asciicast](https://asciinema.org)](https://asciinema.org/a/kjIyaRyrto0jgo8I)
+
+### Brain Prime Demo
+[![asciicast](https://asciinema.org)](https://asciinema.org/a/9vUICHzymoHYekpE)
