@@ -5,7 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\game;
 
-function isPrime(int $num)
+function isPrime(int $num): bool
 {
   if ($num < 2) {
     return false;
@@ -20,7 +20,7 @@ function isPrime(int $num)
   return true;
 }
 
-function questionsCreator()
+function questionsCreator(): array
 {
   $questions = [];
 

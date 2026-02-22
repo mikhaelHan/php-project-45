@@ -11,7 +11,7 @@ function getGcd(int $a, int $b): int
   return ($a % $b) ? getGcd($b, $a % $b) : $b;
 }
 
-function questionsCreator()
+function questionsCreator(): array
 {
   $questions = [];
 

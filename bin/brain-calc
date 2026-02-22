@@ -5,7 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\game;
 
-function questionsCreator()
+function questionsCreator(): array
 {
   $operators = ['+', '*', '-'];
   $result = 0;

@@ -5,7 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\game;
 
-function questionCreator()
+function questionCreator(): array
 {
   $start = rand(1, 9);
   $step = rand(1, 9);
