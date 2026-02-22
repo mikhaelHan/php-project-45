@@ -7,7 +7,7 @@ use function BrainGames\Cli\game;
 
 function questionsCreator()
 {
-  $operators = ['+', '*', '-', '/'];
+  $operators = ['+', '*', '-'];
   $result = 0;
 
   $questions = [];
@@ -17,10 +17,8 @@ function questionsCreator()
     $num1 = rand(2, 20);
     $num2 = rand(2, 20);
 
-    $operator = ($num1 >= $num2 && $num1 % $num2 === 0)
-      ? $operators[3]
-      : ($num1 >= $num2 ? $operators[2]
-        : $operators[rand(0, 1)]);
+    $operator = $num1 >= $num2 ? $operators[2]
+      : $operators[rand(0, 1)];
 
     switch ($operator) {
       case '+':
@@ -33,10 +31,6 @@ function questionsCreator()
 
       case '*':
         $result = $num1 * $num2;
-        break;
-
-      case '/':
-        $result = $num1 / $num2;
         break;
     }
 
